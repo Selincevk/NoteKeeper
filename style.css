@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+body{
+    background-image: url(free-abstract-website-background-free-photo.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Poppins", serif;
+    
+}
+.add-box,.bottom-content,.settings .menu li, .popup,header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper{
+    margin: 50px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill,265px);
+}
+.wrapper li{
+    height: 250px;
+    padding: 15px 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #d6ecfa;
+   
+    
+}
+.add-box{
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.add-box .icon:hover{
+    transform: scale(1.12);
+    transition: transform 0.2s ease-in;
+}
+.add-box .icon{
+    height: 78px;
+    width: 78px;
+    font-size: 40px;
+    color: tomato;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px dashed tomato;
+}
+.add-box p{
+    margin-top: 20px;
+    font-weight: 500;
+    color: tomato;
+}
+.note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note .details{
+    max-height: 165px;
+    overflow-y: auto;
+    color: tomato;
+}
+.note .details .description{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #575757;
+}
+.bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid tomato;
+}
+.bottom-content .settings{
+    position: relative;
+}
+.bottom-content span{
+    font-size: 14px;
+    color: mediumblue;
+}
+.bottom-content .settings i {
+    cursor: pointer;
+    font-size: 15px;
+    color: mediumblue;
+}
+.bottom-content .menu{
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    z-index: 1;
+    padding: 5px 0;
+    border-radius: 4px;
+    transform: scale(0);
+    box-shadow: 0 0 px rgba(0, 0, 0, 0.15);
+    transform-origin: bottom right;
+    transition: all 0.3s ease;
+}
+.settings.show .menu{
+    transform: scale(1);
+}
+
+.settings.show .menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    box-shadow: unset;
+    justify-content: flex-start;
+}
+.settings.show .menu li:hover{
+    background-color: #f5f5f5;
+}
+.menu li i {
+    padding-right: 8px;
+}
+
+ .popup-box.show,
+.popup.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup-box,
+.popup{
+    opacity: 0;
+    pointer-events: none; 
+} 
+.popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+.popup .content{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #d6ecfa;
+    
+
+} 
+.popup .content header {
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+}
+.popup .content header p{
+    font-size: 20px;
+    font-weight: 500;
+    color: mediumblue;
+}
+.popup .content header i{
+    font-size: 23px;
+    cursor: pointer;
+    color: #8b8939;
+}
+.popup .content form{
+    margin: 15px 25px 35px;
+}
+.popup .content form .row{
+    margin-bottom: 20px;
+}
+.popup .content form .row label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: tomato;
+}
+.popup .content form :where(input,textarea){
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid mediumblue;
+    text-indent: 15px;
+    background-color: #d6ecfa;
+}
+.popup .content form:where(input,textarea):focus{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11)
+}
+.popup .content .row textarea {
+    resize: none;
+    height: 150px;
+    padding: 8px 0;
+  }
+  
+  .popup .content form button {
+    width: 100%;
+    height: 50px;
+    color: #d6ecfa;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color:tomato;
+  }
+
+
+
+  
